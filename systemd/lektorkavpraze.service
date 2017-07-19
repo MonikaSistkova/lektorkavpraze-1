@@ -1,0 +1,11 @@
+[Unit]
+Description=lektorkavpraze.cz sinatra app
+After=network.target remote-fs.target nss-lookup.target
+
+[Service]
+Environment=LC_ALL=en_US.UTF-8
+ExecStart=/usr/bin/ruby /srv/www/lektorkavpraze.cz/rb/lektorkavpraze.rb
+ExecStop=/bin/kill -s QUIT $MAINPID
+
+[Install]
+WantedBy=multi-user.target

@@ -1,0 +1,173 @@
+body  {
+	font-size: 15px;
+	font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+	margin: 0px auto;
+	padding: 20px;
+	color: #000000;
+	background:  #666;
+	background-image:url('/resources/images/pokoj.jpg');
+	background-size: 100%;
+	background-attachment:fixed;
+}
+
+#title {
+	font-family: 'Racing Sans One', cursive;
+        font-size: 58px;
+	color: #000;
+	display: inline;
+	padding-left: 10px;
+	text-shadow: 1px 1px 4px #fff;
+	line-height: 74px;
+}
+
+#subtitle {
+	font-family: 'Racing Sans One', cursive;
+	font-size: 42px;
+	color: #000;
+	display: inline;
+	padding-left: 5px;
+	text-shadow: 1px 1px 4px #fff;
+	line-height: 74px;
+}
+
+#centerbox {
+	width: 700px;
+	margin: 0 auto;
+	padding: 0px 0px 0px 0px;
+}
+
+#content {
+	padding-top: 0;
+	padding-left: 0;
+	padding-right: 0;
+	padding-bottom: 20px;
+	background: #fff;
+	box-shadow: 1px 1px 4px #000;
+	background-color:rgba(255,255,255,0.8);
+}
+
+#tabs {
+	padding: 0;
+	height: 380px;
+}
+
+#tabtops {
+	padding: 0;
+	margin: 0;
+	font-size: 0;
+	height: 45px;
+}
+
+#tabtops ul {
+	padding: 0;
+	margin: 0;
+	background-color:rgba(255,255,255,0);
+}
+
+#tabtops li.active a {
+	background-color:rgba(255,255,255,0);
+	color: black;
+	border-width: 0px;
+}
+
+#tabtops li {
+	display: inline-block;
+	padding: 0px;
+	margin: 0px;
+	width: 175px;
+	height: 25px;
+	font-size: 20px;
+}
+
+#tabtops li a {
+	display:block;
+	padding: 10px;
+	background: #8a7b59;
+	color: white;
+	border-style: solid;
+	border-width: 1px;
+	border-color: #61563e;
+}
+
+#tabtops li a:hover {
+	background-color: #e6cd94;
+	color: black;
+}
+
+#tabtops li.active a:hover {
+	background-color:rgba(255,255,255,0);
+}
+
+#omne, #anglictina, #piano, #doucovani {
+	padding-left: 20px;
+	padding-right: 20px;
+	line-height: 22px;
+}
+
+#photo {
+	float: right;
+	padding-right: 10px;
+	padding-top: 20px;
+	padding-bottom: 20px;
+}
+
+h3 {
+	margin-left: 20px;
+	margin-bottom: 0px;
+}
+
+td {
+	padding-left: 20px;
+	padding-right: 5px;
+}
+
+a:link {
+	color: #000000;
+	text-decoration: none;
+}
+
+a:visited {
+	color: #000000;
+	text-decoration: none;
+}
+
+a:active {
+	color: #000000;
+	text-decoration: none;
+}
+
+a:hover {
+	color: #000000;
+	text-decoration: underline;
+}
+
+#bgtitle {
+	position: fixed;
+	bottom: 5px;
+	right: 5px;
+	color: #000;
+	background-color: transparent;
+	text-shadow: 0px 0px 4px #fff;
+	font-size: 15px;
+	font-weight: bold;
+	z-index: -999;
+}
+
+@media print {
+	#bgtitle {
+		display: none;
+	}
+
+	#contactform {
+		display: none;
+	}
+
+	#tabtops li.active {
+		font-weight: bold;
+		display: inline;
+	}
+
+	#tabtops li {
+		display: none;
+	}
+}
