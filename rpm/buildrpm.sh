@@ -14,6 +14,7 @@ mkdir ~/rpmbuild/SOURCES/lektorkavpraze-1
 cp -r www rb systemd nginx ~/rpmbuild/SOURCES/lektorkavpraze-1/
 ( cd ~/rpmbuild/SOURCES/; tar cvzf lektorkavpraze.tar.gz lektorkavpraze-1 )
 rm -r ~/rpmbuild/SOURCES/lektorkavpraze-1
+rm ~/rpmbuild/RPMS/noarch/*.rpm
 
 rpmbuild -bb -v ~/rpmbuild/SPECS/lektorkavpraze.spec
 
