@@ -5,7 +5,7 @@ body  {
 	padding: 20px;
 	color: #000000;
 	background:  #666;
-	background-image:url('/resources/images/pokoj.jpg');
+	background-image:url('/resources/images/pokoj-modrany.jpg');
 	background-size: 100%;
 	background-attachment:fixed;
 }

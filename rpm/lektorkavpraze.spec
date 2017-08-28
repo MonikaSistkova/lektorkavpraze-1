@@ -44,6 +44,7 @@ install -m 644	www/resources/css/main.css %{buildroot}/srv/www/lektorkavpraze.cz
 install -d	%{buildroot}/srv/www/lektorkavpraze.cz/www/resources/images
 install -m 644	www/resources/images/favicon-ms.png %{buildroot}/srv/www/lektorkavpraze.cz/www/resources/images/favicon-ms.png
 install -m 644	www/resources/images/pokoj.jpg %{buildroot}/srv/www/lektorkavpraze.cz/www/resources/images/pokoj.jpg
+install -m 644	www/resources/images/pokoj-modrany.jpg %{buildroot}/srv/www/lektorkavpraze.cz/www/resources/images/pokoj-modrany.jpg
 install -m 644	www/resources/images/MS.png %{buildroot}/srv/www/lektorkavpraze.cz/www/resources/images/MS.png
 install -d	%{buildroot}/srv/www/lektorkavpraze.cz/rb
 install -m 644	rb/lektorkavpraze.rb %{buildroot}/srv/www/lektorkavpraze.cz/rb/lektorkavpraze.rb
@@ -83,6 +84,7 @@ echo Reloading nginx.
 /srv/www/lektorkavpraze.cz/www/resources/css/main.css
 /srv/www/lektorkavpraze.cz/www/resources/images/favicon-ms.png
 /srv/www/lektorkavpraze.cz/www/resources/images/pokoj.jpg
+/srv/www/lektorkavpraze.cz/www/resources/images/pokoj-modrany.jpg
 /srv/www/lektorkavpraze.cz/www/resources/images/MS.png
 /srv/www/lektorkavpraze.cz/rb/lektorkavpraze.rb
 /etc/nginx/vhosts.d/lektorkavpraze.cz.conf
