@@ -52,6 +52,7 @@ install -d	%{buildroot}/etc/nginx/vhosts.d
 install -m 644	nginx/lektorkavpraze.cz.conf %{buildroot}/etc/nginx/vhosts.d/lektorkavpraze.cz.conf
 install -d	%{buildroot}/etc/systemd/system
 install -m 644	systemd/lektorkavpraze.service %{buildroot}/etc/systemd/system/lektorkavpraze.service
+install -m 644	rb/lektorkavpraze.conf %{buildroot}/etc/lektorkavpraze.conf
 
 %post
 echo Installing rubygems
@@ -89,3 +90,4 @@ echo Reloading nginx.
 /srv/www/lektorkavpraze.cz/rb/lektorkavpraze.rb
 /etc/nginx/vhosts.d/lektorkavpraze.cz.conf
 /etc/systemd/system/lektorkavpraze.service
+%config(noreplace) /etc/lektorkavpraze.conf

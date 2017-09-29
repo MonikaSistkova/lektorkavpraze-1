@@ -1,5 +1,6 @@
 # encoding: UTF-8
 
+require 'yaml'
 require 'rubygems'
 require 'sinatra'
 require 'pony'
@@ -7,6 +8,8 @@ require 'pony'
 set :bind,      "localhost"
 set :port,      2011
 set :protection, :origin_whitelist => ['http://www.lektorkavpraze.cz']
+
+$config = YAML.load_file('/etc/lektorkavpraze.conf')
 
 get '/' do
   erb :kontakt
@@ -38,8 +41,8 @@ def sendmail(name, contact, body)
               :address => 'smtp.gmail.com',
               :port => '587',
               :enable_starttls_auto => true,
-              :user_name => 'noreply@sistkovi.cz',
-              :password => 'PASSWORD',
+              :user_name => $config["gmail_user"],
+              :password => $config["gmail_pass"],
               :authentication => :plain, # :plain, :login, :cram_md5, no auth by default
               :domain => "localhost.localdomain" # the HELO domain provided by the client to the server
             }
@@ -109,12 +112,15 @@ return false;
   </div>
   <div id="anglictina">
     <%= IO.read("/srv/www/lektorkavpraze.cz/www/anglictina.html") %>
+    <p>Cena jedné lekce trvající <b>45min je <%= $config["cena_anglictina"] %>Kč.</b><br/></p>
   </div>
   <div id="piano">
     <%= IO.read("/srv/www/lektorkavpraze.cz/www/piano.html") %>
+    <p>Cena jedné lekce trvající <b>45min je <%= $config["cena_piano"] %>Kč.</b><br/></p>
   </div>
   <div id="doucovani">
     <%= IO.read("/srv/www/lektorkavpraze.cz/www/doucovani.html") %>
+    <p>Cena jedné lekce trvající <b>45min je <%= $config["cena_doucovani"] %>Kč.</b><br/></p>
   </div>
 </div>
 <h3>Kontakt</h3>
