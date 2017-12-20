@@ -112,15 +112,15 @@ return false;
   </div>
   <div id="anglictina">
     <%= IO.read("/srv/www/lektorkavpraze.cz/www/anglictina.html") %>
-    <p>Cena jedné lekce trvající <b>45min je <%= $config["cena_anglictina"] %>Kč.</b><br/></p>
+    <p><%= $config["cena_anglictina"] %><br/></p>
   </div>
   <div id="piano">
     <%= IO.read("/srv/www/lektorkavpraze.cz/www/piano.html") %>
-    <p>Cena jedné lekce trvající <b>45min je <%= $config["cena_piano"] %>Kč.</b><br/></p>
+    <p><%= $config["cena_piano"] %><br/></p>
   </div>
   <div id="doucovani">
     <%= IO.read("/srv/www/lektorkavpraze.cz/www/doucovani.html") %>
-    <p>Cena jedné lekce trvající <b>45min je <%= $config["cena_doucovani"] %>Kč.</b><br/></p>
+    <p><%= $config["cena_doucovani"] %><br/></p>
   </div>
 </div>
 <h3>Kontakt</h3>
